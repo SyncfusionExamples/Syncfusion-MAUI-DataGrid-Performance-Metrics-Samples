@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MAUISfDataGrid/MAUISfDataGrid.csproj">
+    <Deploy />
+  </Project>
+</Solution>

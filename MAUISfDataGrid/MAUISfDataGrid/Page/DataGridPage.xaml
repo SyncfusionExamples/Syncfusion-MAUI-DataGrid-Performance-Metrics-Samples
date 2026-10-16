@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUISfDataGrid.Pages.DataGridPage"
+             xmlns:local="clr-namespace:MAUISfDataGrid"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             Title="DataGridPage">
+
+    <Grid RowDefinitions="70,*">
+        <Grid ColumnSpacing="10"
+              Padding="10"
+              ColumnDefinitions="*,*,*,*,*,*">
+            <Button Grid.Column="0"
+                    Text="Load Data"
+                    Clicked="Button_Clicked" />
+            <Button Grid.Column="1"
+                    Text="Sorting"
+                    Clicked="Button_Clicked_1" />
+            <Button Grid.Column="2"
+                    Text="Grouping"
+                    Clicked="Button_Clicked_2" />
+            <Button Grid.Column="3"
+                    Text="Filtering"
+                    Clicked="Button_Clicked_3" />
+            <Button Grid.Column="4"
+                    Text="Clear"
+                    Clicked="Button_Clicked_4" />
+            <Border StrokeShape="RoundRectangle 10"
+                    Grid.Column="5">
+                <Label VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       x:Name="label"
+                       Text="0ms" />
+            </Border>
+        </Grid>
+        
+        <syncfusion:SfDataGrid Grid.Row="1"
+                               x:Name="sfdatagrid">
+        </syncfusion:SfDataGrid>
+    </Grid>
+</ContentPage>
